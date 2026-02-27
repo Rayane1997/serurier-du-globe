@@ -2683,3 +2683,203 @@ a:focus-visible {
     font-size: 2rem;
   }
 }
+
+/* ==================
+   ZONES PAGE STYLES
+   ================== */
+
+.zones-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.zones-intro-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-bottom: 3rem;
+}
+
+.zones-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.zone-stat {
+  text-align: center;
+  padding: 2rem;
+  background: var(--bg-beige);
+  border-radius: var(--radius-card);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-brown);
+  font-family: var(--font-heading);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+/* Communes List Section */
+.communes-list-section {
+  margin: 5rem 0;
+}
+
+.communes-list-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: var(--text-dark);
+}
+
+.communes-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.commune-card {
+  background: white;
+  border: 2px solid var(--bg-beige-alt);
+  border-radius: var(--radius-card);
+  padding: 2rem;
+  transition: all var(--transition-smooth);
+}
+
+.commune-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+.commune-card.priority {
+  border-color: var(--primary-brown);
+  background: linear-gradient(135deg, #FFF9F5 0%, #FFFFFF 100%);
+}
+
+.commune-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--bg-beige);
+}
+
+.commune-card-icon {
+  font-size: 2rem;
+}
+
+.commune-card-header h4 {
+  font-size: 1.25rem;
+  margin: 0;
+  color: var(--primary-brown);
+}
+
+.commune-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.commune-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--bg-beige);
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.commune-list li:last-child {
+  border-bottom: none;
+}
+
+.commune-list li strong {
+  color: var(--primary-brown);
+  font-weight: 600;
+}
+
+/* Services by Zone */
+.services-by-zone {
+  margin: 5rem 0;
+  padding: 4rem 0;
+  background: var(--bg-beige);
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding-left: calc(50vw - 50%);
+  padding-right: calc(50vw - 50%);
+}
+
+.services-by-zone .section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services-by-zone .service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Zones CTA */
+.zones-cta {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--primary-brown) 0%, var(--primary-brown-dark) 100%);
+  border-radius: var(--radius-card);
+  color: white;
+  margin: 4rem 0;
+}
+
+.zones-cta h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.zones-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.zones-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .zones-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .communes-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .zones-cta h3 {
+    font-size: 1.5rem;
+  }
+
+  .zones-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .zones-cta-buttons .btn {
+    width: 100%;
+  }
+}
